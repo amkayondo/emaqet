@@ -1,0 +1,87 @@
+
+.newsletter-banner {
+  position: relative;
+  padding: 20px 0;
+  background-color: @mainColor;
+  overflow: hidden;
+
+  @media @tablet {
+    padding: 40px 0;
+  }
+
+  form {
+    position: relative;
+    color: @white;
+
+    label {
+      text-align: left;
+      padding-bottom: 5px;
+      font-size: 16px;
+      white-space: nowrap;
+      width: 100%;
+
+      @media @desktop {
+        text-align: right;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        font-size: 18px;
+        margin-bottom: 0;
+      }
+
+      @media @desktop-lg {
+        font-size: 20px;
+      }
+    }
+
+    input[type="text"], input[type="password"], input[type="search"], input[type="email"], input[type="tel"], .form-control {
+      border: 0 solid @white!important;
+
+      &:focus, &:active {
+        border-color: @white;
+      }
+    }
+
+    .input-group {
+
+      .input-group-btn {
+        border: 0!important;
+
+        &:last-child {
+          > .btn {
+            border-radius: 0;
+            border: 0!important;
+          }
+        }
+      }
+    }
+
+    &:before {
+      position: absolute;
+      top: 10px;
+      left: -55px;
+      color: @white;
+      height: 100%;
+      opacity: 0.30;
+      content: '\f0a1';
+      font-size: 50px;
+      line-height: 50px;
+      font-family: @awesomeFont;
+      -webkit-transform: rotate(-50deg);
+      -ms-transform: rotate(-50deg);
+      transform: rotate(-50deg);
+      display: none;
+
+      @media @tablet {
+        display: block;
+      }
+
+      @media @desktop {
+        top: 0;
+        left: -75px;
+      }
+      @media @desktop-lg {
+        left: -45px;
+      }
+    }
+  }
+}

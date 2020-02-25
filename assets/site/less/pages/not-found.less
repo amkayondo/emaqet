@@ -1,0 +1,109 @@
+
+@img404   : "../img/404.jpg";
+
+.not-found {
+  padding: 80px 0 40px 0;
+  //background-repeat: no-repeat;
+  //background-position: right center;
+  //-webkit-background-size: 150px;
+  //-moz-background-size: 150px;
+  //-o-background-size: 150px;
+  //background-size: 150px;
+  //background-image:url(@img404);
+
+  &:after {
+    position: absolute;
+    content: "\f071";
+    font-family: @awesomeFont;
+    font-size: 100px;
+    opacity: .3;
+    display: none;
+  }
+
+  .block {
+    padding: 0 0 20px 0;
+    margin: 0 0 20px 0;
+    border-bottom: 1px solid @gray1;
+
+    @media @desktop {
+      padding: 0 0 80px 0;
+      margin: 0 0 80px 0;
+    }
+
+    &:last-child {
+      border-width: 0;
+
+      @media @desktop {
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
+      }
+    }
+
+    .block-heading {
+      padding: 20px 0 20px 0;
+
+      h1 {
+        position: relative;
+        font-family: @headingFont;
+        text-transform: uppercase;
+        float: left;
+        padding-right: 10px;
+
+        @media @tablet {
+          padding-right: 20px;
+        }
+
+        @media @desktop {
+          margin: 0 0 40px 0;
+          padding-right: 20px;
+        }
+
+        &:before {
+          content: "";
+          display: block;
+          background-color: @mainColor;
+          width: 60px;
+          height: 4px;
+          margin: 0 0;
+        }
+
+        &:after {
+          content: "\f071";
+          font-family: @awesomeFont;
+          color: @mainColor;
+          font-size: 65px;
+          opacity: .2;
+          //display: none;
+
+          @media (min-width: 375px) {
+            position: absolute;
+            top: 15px;
+            left: 100%;
+          }
+
+          @media @tablet {
+            //top: 0;
+            //left: 100%;
+            //font-size: 85px;
+          }
+        }
+
+        .info {
+          display: block;
+          font-family: @baseFont;
+          font-size: 16px;
+          color: @mainColor;
+          text-transform: none;
+        }
+      }
+    }
+
+    .block-body {
+
+      a {
+        color: @mainColor;
+      }
+    }
+  }
+
+}
