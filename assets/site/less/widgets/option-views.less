@@ -1,0 +1,49 @@
+
+.view-options {
+  margin-bottom: 15px;
+
+  @media @tablet {
+    padding-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  .row {
+    margin-right: -5px;
+    margin-left: -5px;
+
+    [class*="col-"] {
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+  }
+
+  .select2-container {
+    .select2-dropdown {
+      .select2-search {
+        display: none!important;
+      }
+    }
+  }
+
+  .btn-grid, .btn-list {
+    display: inline-block;
+    color: @blackOpacity25;
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 8px;
+    cursor: pointer;
+
+    @media @tablet {
+      margin-top: 8px;
+    }
+
+    &.active {
+      color: @blackOpacity85;
+      cursor: default;
+    }
+
+    + .btn-grid, + .btn-list {
+      margin-left: 3px;
+    }
+  }
+}

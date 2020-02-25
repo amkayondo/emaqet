@@ -1,0 +1,94 @@
+
+.rating {
+  text-align: center;
+  margin: 0 auto!important;
+  padding: 0 0 0 0!important;
+
+  span {
+    display: inline-block;
+    font-size: 18px;
+    color: @blackOpacity25;
+
+    .fa {
+
+      &.fa-star-o {
+
+        &:before {
+          content: "\f006";
+        }
+      }
+    }
+  }
+
+  &.rating-1 {
+    span {
+      &:nth-child(1) {
+        color: @colorSecondaryOpacity50;
+        .fa {
+          &.fa-star-o {
+            &:before {
+              content: "\f005";
+            }
+          }
+        }
+      }
+    }
+  }
+  &.rating-2 {
+    span {
+      &:nth-child(1),&:nth-child(2) {
+        color: @colorSecondaryOpacity50;
+        .fa {
+          &.fa-star-o {
+            &:before {
+              content: "\f005";
+            }
+          }
+        }
+      }
+    }
+  }
+  &.rating-3 {
+    span {
+      &:nth-child(1),&:nth-child(2),&:nth-child(3) {
+        color: @colorSecondaryOpacity50;
+        .fa {
+          &.fa-star-o {
+            &:before {
+              content: "\f005";
+            }
+          }
+        }
+      }
+    }
+  }
+  &.rating-4 {
+    span {
+      &:nth-child(1),&:nth-child(2),&:nth-child(3),&:nth-child(4) {
+        color: @colorSecondaryOpacity50;
+        .fa {
+          &.fa-star-o {
+            &:before {
+              content: "\f005";
+            }
+          }
+        }
+      }
+    }
+  }
+  &.rating-5 {
+    span {
+      &:nth-child(1),&:nth-child(2),&:nth-child(3),&:nth-child(4),&:nth-child(5) {
+        color: @colorSecondaryOpacity50;
+        .fa {
+          &.fa-star-o {
+            &:before {
+              content: "\f005";
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

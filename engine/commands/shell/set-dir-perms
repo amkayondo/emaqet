@@ -1,0 +1,24 @@
+#!/bin/bash
+
+##
+# This file is part of the EasyAds application.
+# It is a helper script to chmod to 0777 all the needed directories upon install
+# full path to the document root
+DOCUMENT_ROOT="$( cd "$( dirname "$0" )" && cd ../../../ && pwd )"
+
+# the directories we need to change permissions
+PATHS[0]="$DOCUMENT_ROOT/engine/config"
+PATHS[1]="$DOCUMENT_ROOT/engine/runtime"
+PATHS[2]="$DOCUMENT_ROOT/assets/cache"
+PATHS[3]="$DOCUMENT_ROOT/assets/twig"
+
+printf "%s\n" "Setting proper permissions for directories..."
+
+for i in "${PATHS[@]}"
+do
+    printf "%s" "chmod -R 0777 $i -> "
+    chmod -R 0777 "$i"
+    printf "%s\n" "done."
+done
+
+printf "%s\n" "DONE!"
